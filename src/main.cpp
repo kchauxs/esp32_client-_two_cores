@@ -19,8 +19,8 @@ long lastMsg = 0;
 char msg[100];
 
 int card = 117541900;
-int door = 21;
-int led = 32;
+//int door = 21;
+//int led = 32;
 //*****************************
 //*** DECLARACION FUNCIONES ***
 //*****************************
@@ -37,7 +37,7 @@ void codeForTask1(void *parameter)
 
   for (;;)
   {
-
+    /*
     if (digitalRead(door))
     {
       Serial.println(" ->  Puerta abierta ");
@@ -48,6 +48,7 @@ void codeForTask1(void *parameter)
       Serial.println(" -> Puerta Cerrada");
       digitalWrite(led, LOW);
     }
+    */
 
     delay(500);
 
@@ -57,8 +58,8 @@ void codeForTask1(void *parameter)
 
 void setup()
 {
-  pinMode(led, OUTPUT);
-  pinMode(door, INPUT_PULLUP);
+  //pinMode(led, OUTPUT);
+  //pinMode(door, INPUT_PULLUP);
   pinMode(BUILTIN_LED, OUTPUT);
 
   Serial.begin(9600);
